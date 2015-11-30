@@ -23,6 +23,7 @@ class RainController < ApplicationController
     respond_to do |format|
       format.html  # index.html.erb
       format.json  { render :json => result }
+      format.js { render :json => result, :callback => params[:callback] }
     end
   end
 
